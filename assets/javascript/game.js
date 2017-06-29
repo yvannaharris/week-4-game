@@ -1,4 +1,8 @@
 //Get random target number
+var targetNumber= Math.floor((Math.random() * (100 - 30)) + 30);
+console.log(targetNumber);
+
+
 
 //Get crystal value/number options
 
