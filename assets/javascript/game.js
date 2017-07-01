@@ -29,7 +29,7 @@ $.each($('img'), function(index, value) {
 //Add value to counter	
 		counter += crystalValue;
 		console.log(counter);
-		$("#crystal-counter").text(counter);
+		$("#crystal-counter").text("Your total score is: " + counter);
 
 //Check if counter matches target number (if else)
 //Record wins/loses

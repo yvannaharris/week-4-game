@@ -5,6 +5,7 @@
 		<title>Crystal Collector Game</title>
 		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico" rel="stylesheet">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
 		<script src="assets/javascript/game.js"></script>
 	</head>
@@ -13,7 +14,7 @@
 <!--Game Header-->
 <h1>Crystal Collector</h1>
 <!--Game rules-->
-<div>
+<div id="instructions">
 	<p>You will be given a random number at the start of the game.</p>
 
 	<p>There are four crystals below. By clicking on the crystal you will add a specific amount of points to your total score.</p>
@@ -25,13 +26,15 @@
 	<p>Each time the game starts, the game will change the value of each crystal.</p>
 </div>
 <!--Counter-->
-<div>
-	<span id="number-to-guess"></span>
+<div class="metrics">
+<div class="count">
+	<div id="number-to-guess"></div>
 </div>
 <!--Score board-->
-<div>
+<div class="score-board">
 	<div id="wins">Wins: </div>
 	<div id="losses">Losses: </div>
+</div>
 </div>
 
 <div id="crystals">
@@ -46,8 +49,10 @@
 	<img class="crystal-image" src="assets/images/Gem4.png">
 </div>
 <!--Total score-->
-<div>Your total score is</div>
-<div id="crystal-counter"></div>
+<div class="total">
+	<div id="crystal-counter">Your total score is: </div>
+</div>
+
 
 
 
