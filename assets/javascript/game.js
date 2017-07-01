@@ -37,12 +37,10 @@ $.each($('img'), function(index, value) {
 			alert("You win!");
 			win++;
 			$("#wins").text("Wins: " + win);
-			reset();
 		} else if (counter >= targetNumber) {
 			alert("You lose.");
 			lose++;
 			$("#losses").text("Losses: " + lose);
-			reset();
 		}
 
 
@@ -52,8 +50,10 @@ $.each($('img'), function(index, value) {
 
 //Restart game
 function reset() {
+	//reset counter?
+
 	counter = 0;
-	$("cystal-counter").text(counter);
+
 	targetNumber= Math.floor((Math.random() * (100 - 30)) + 30);
 
 	$("#number-to-guess").text(targetNumber);
