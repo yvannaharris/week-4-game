@@ -1,6 +1,6 @@
 $(function() {
 //Get random target number
-	var targetNumber= Math.floor((Math.random() * (100 - 30)) + 30);
+	var targetNumber= Math.floor((Math.random() * (120 - 19)) + 19);
 	console.log(targetNumber);
 
 	$("#number-to-guess").text(targetNumber);
@@ -14,7 +14,7 @@ $(function() {
 //Get crystal value/number options
 
 $.each($('img'), function(index, value) {
-	var numberOptions = Math.floor((Math.random() * 20) + 1);
+	var numberOptions = Math.floor((Math.random() * 12) + 1);
 	$(value).attr("data-crystalvalue", numberOptions);
 	console.log(numberOptions);
 });
@@ -36,13 +36,13 @@ $.each($('img'), function(index, value) {
 		if (counter === targetNumber) {
 			alert("You win!");
 			win++;
-			$("#wins").text(win);
+			$("#wins").text("Wins: " + win);
 			reset();
 		} else if (counter >= targetNumber) {
 			alert("You lose.");
 			lose++;
-			$("#loses").text(lose);
-			//reset();
+			$("#losses").text("Losses: " + lose);
+			reset();
 		}
 
 
@@ -50,10 +50,20 @@ $.each($('img'), function(index, value) {
 
 
 
-
-
 //Restart game
+function reset() {
+	counter = 0;
+	$("cystal-counter").text(counter);
+	targetNumber= Math.floor((Math.random() * (100 - 30)) + 30);
 
+	$("#number-to-guess").text(targetNumber);
+
+	var numberOptions= Math.floor((Math.random() * 20) + 1);
+
+	var imageCrystal = $('img');
+
+	imageCrystal.attr("data-crystalvalue", numberOptions);
+};
 
 
 
